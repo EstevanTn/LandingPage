@@ -1,8 +1,3 @@
----
-title: "Alexander Estevan Tume Naquiche"
-output: pdf_document
----
-
 # My Personal Landing Page (EstevanTn)
 
 - Install NodeJS.
