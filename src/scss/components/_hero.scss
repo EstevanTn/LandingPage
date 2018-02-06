@@ -1,0 +1,59 @@
+.hero {
+	display: flex;
+	color: $text-secondary-color;
+	min-height: 670px;
+	background-image: linear-gradient(130deg, transparent, rgba(#000000, .7), transparent);
+	&__left {
+		justify-content: flex-start;
+		@include tocenter;
+		width: 50%;
+		&-content {
+			@include tocenter;
+			flex-direction: column;
+		}
+		&-cover {
+			&-photo img {
+				border: 5px solid #ffffff;
+			}
+		}
+		&-name {
+			padding-top: 5px;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			font-size: $font-size*1.7;
+		}
+		&-description {
+			padding: 10px;
+			color: #ffffff;
+		}
+	}
+	&__right {
+		@include tocenter;
+		width: 50%;
+		&-buttons {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			min-width: 200px;
+			min-height: 200px;
+			a {
+				width: 100%;
+				color: $text-secondary-color;
+				text-decoration: none;
+				border: 1px solid $text-secondary-color;
+				margin-bottom: 5px;
+				&:hover {
+					color: darken($text-secondary-color, 20%);
+					font-size: bold;
+					border: 1px solid darken($text-secondary-color, 20%);
+				}
+				&::before {
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}

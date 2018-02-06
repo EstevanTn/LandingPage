@@ -1,0 +1,31 @@
+@mixin center {
+	display: flex;
+	justify-content: center;
+}
+@mixin tocenter {
+	@include center;
+	align-items: center;
+}
+
+@mixin container {
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+@mixin desde($size){
+	@media screen and (min-width: $size){
+		@content;
+	}
+}
+  
+@mixin hasta($size){
+	@media screen and (max-width: $size){
+		@content;
+	}
+}
+
+@mixin transition ($args...) {
+	--wetkit-transition: $args;
+	--moz-transition: $args;
+	transition: $args;
+}

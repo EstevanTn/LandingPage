@@ -1,0 +1,35 @@
+.presentation {
+	background-color: #222222;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+	@include transition(all 2s ease);
+	@include hasta($sm) {
+		background-size: 150% 150%;
+		background-position-y: 20%;
+		background-position-x: 20%;
+	}
+}
+
+section {
+	@include transition(all 500ms ease-out);
+	&:target {
+		height: 100%;
+	}
+}
+
+img {
+	border-radius: $border-radius-image;
+	&.parallax-slider {
+		border-radius: 0px;
+	}
+}
+
+a {
+	color: $text-secondary-color;
+	&:hover, &:focus {
+		color: darken($text-secondary-color, 20%);
+	}
+}

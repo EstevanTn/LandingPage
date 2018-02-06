@@ -1,0 +1,21 @@
+.info {
+	background: $text-primary-color;
+	color: #ffffff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&__title {
+		text-align: center;
+		font-size: 1.7em;
+	}
+	&__content {
+		margin-left: $margin-page;
+		width: calc(100% - #{$margin-page*2});
+		font-size: 1em;
+		font-style: italic;
+		font-weight: 100;
+		@include container;
+		p {
+			text-align: justify;
+		}
+	}
+}

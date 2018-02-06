@@ -1,0 +1,41 @@
+.portafolio {
+	background-color: $background;
+	color: $text-primary-color;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	&__title {
+		text-align: center;
+		font-size: 1.8em;
+		font-weight: 600;
+	}
+	&__description {
+		text-align: center;
+		margin-left: $margin-page;
+		width: calc(100% - #{$margin-page*2});
+	}
+	&__content {
+		position: relative;
+		left: $margin-page;
+		width: calc(100% - #{$margin-page*2});
+		@include container;
+		display: flex;
+		flex-direction: row;
+		.row {
+			width: 100%;
+		}
+	}
+	&__img {
+		width: 25%;
+		@include tocenter;
+		flex-direction: column;
+		margin-bottom: 20px;
+		@include transition(all 1s ease-in);
+	}
+	a {
+		color: $text-primary-color;
+		font-weight: bolder;
+		&:hover {
+			color: darken($text-primary-color, 20%);
+		}
+	}
+}
